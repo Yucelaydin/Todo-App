@@ -1,0 +1,50 @@
+/******************** THEMES ********************/
+:root {
+    --light: radial-gradient(circle, #dfdfdf 50%, #FBF9F1 100%);
+    --dark: radial-gradient(circle, #343541 50%, #464754 100%);
+    --rose: radial-gradient(circle, #e0bebb 50%, #ffdad7 100%);
+}
+
+[data-theme="light"] {
+    --background-color: var(--light);
+    --task: rgb(193, 193, 193);
+    --task-hover: rgb(210, 216, 216);
+    --input: #95adb9;
+    --input-border: #39795b;
+    --input-border-hover: #44dd77;
+    --button: #95adb9;
+    --button-active: #39795b;
+}
+[data-theme="dark"] {
+    --background-color: var(--dark);
+    --task: #f0f8ff;
+    --task-hover: #cbccdd;
+    --input: #869999;
+    --input-border: #0556e1;
+    --input-border-hover: #908ffa;
+    --button: #869999;
+    --button-active: #5ed19d;
+}
+[data-theme="rose"] {
+    --background-color: var(--rose);
+    --task: #e3aba7;
+    --task-hover: #fabbb6;
+    --input: #f8aea5;
+    --input-border: #1e985f;
+    --input-border-hover: #44dd77;
+    --button: #4e9b77;
+    --button-active: #1e985f;
+}
+
+.main {
+    background: var(--background-color);
+	width: 100%;
+    min-height: 100vh;
+    height: 100%;
+	display: flex;
+	justify-content: center;
+
+	.main__wrapper {
+		width: 70%;
+	}
+}

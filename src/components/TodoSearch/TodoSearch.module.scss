@@ -1,0 +1,26 @@
+.form {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.input {
+    &[type='text'] {
+        display: block;
+        width: 80%;
+        padding: 0.5rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        border-radius: 5px;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 0.4rem solid var(--input-border);
+        background-color: var(--input);
+        color: black;
+        transition: 0.2s all ease;
+
+        &:focus, &:active {
+            border-color: var(--input-border-hover);
+        }
+    }
+}

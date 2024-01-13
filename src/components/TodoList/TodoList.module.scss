@@ -1,0 +1,19 @@
+
+
+.list_wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    .list {
+        width: 80%;
+        height: 30rem;
+        overflow-y: auto;
+
+        .no_record {
+            background-color: var(--task);
+            padding: 10px;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+}

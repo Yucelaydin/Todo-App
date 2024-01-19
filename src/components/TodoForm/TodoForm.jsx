@@ -20,16 +20,20 @@ const TodoForm = props => {
 
   const addTask = () => {
     let list = JSON.parse(localStorage.getItem('todo-list'));
-    list.push(taskInput.current.value);
+    if(list)
+      list.push(taskInput.current.value);
+    else
+      list = [taskInput.current.value];
     localStorage.setItem('todo-list', JSON.stringify(list));
     taskInput.current.value = '';
+    setButtonClass(`${classes.button}`);
     refreshList();
   }
 
   return (
     <form onSubmit={handleSubmit} className={classes.form}>
       <div className={classes.row}>
-        <input type='text' className={classes.input} onChange={handleChange} ref={taskInput}/>
+        <input type='text' className={classes.input} onChange={handleChange} ref={taskInput} onKeyDown={(e) => {e.key == 'Enter' && addTask()}}/>
         <SiAddthis className={buttonClass} onClick={addTask}/>
       </div>
     </form>
